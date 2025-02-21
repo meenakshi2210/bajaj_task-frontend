@@ -60,13 +60,13 @@ export default function Task() {
         <h2 style={{ fontSize: "18px", fontWeight: "bold", marginBottom: "10px" }}>Response</h2>
         {responseData && (
           <div style={{ color: "#333" }}>
-            {!selectedFilters.includes("alphabets") && (
+            {selectedFilters.includes("alphabets") && (
               <p style={{ marginBottom: "5px" }}>Alphabets: <span style={{ fontWeight: "bold" }}>{responseData.alphabets?.join(", ") || "N/A"}</span></p>
             )}
-            {!selectedFilters.includes("numbers") && (
+            {selectedFilters.includes("numbers") && (
               <p style={{ marginBottom: "5px" }}>Numbers: <span style={{ fontWeight: "bold" }}>{responseData.numbers?.join(", ") || "N/A"}</span></p>
             )}
-            {!selectedFilters.includes("highest_alphabet") && (
+            {selectedFilters.includes("highest_alphabet") && (
               <p>Highest Alphabet: <span style={{ fontWeight: "bold" }}>{responseData.highest_alphabet || "N/A"}</span></p>
             )}
           </div>
